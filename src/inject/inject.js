@@ -2,6 +2,7 @@
  * The MIT License (MIT)
  *
  * Copyright (c) 2015 erkserkserks
+ * Copyright (c) 2015 Josua Mayer
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -28,10 +29,8 @@
   var origCanPlayType = videoElem.canPlayType.bind(videoElem);
   videoElem.__proto__.canPlayType = function(type) {
     if (type === undefined) return '';
-    // If queried about webM/vp8/vp8 support, say we don't support them
-    if (type.indexOf('webm') != -1 ||
-      type.indexOf('vp8') != -1 ||
-      type.indexOf('vp9') != -1) {
+    // If queried about vp9 support, say we don't support it
+    if (type.indexOf('vp9') != -1) {
       return '';
     }
     // Otherwise, ask the browser
@@ -45,10 +44,8 @@
   var origIsTypeSupported = mse.isTypeSupported.bind(mse);
   mse.isTypeSupported = function(type) {
     if (type === undefined) return '';
-    // If queried about webM/vp8/vp8 support, say we don't support them
-    if (type.indexOf('webm') != -1 ||
-      type.indexOf('vp8') != -1 ||
-      type.indexOf('vp9') != -1) {
+    // If queried about vp9 support, say we don't support it
+    if (type.indexOf('vp9') != -1) {
       return '';
     }
     // Otherwise, ask the browser

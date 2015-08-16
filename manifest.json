@@ -2,9 +2,8 @@
   "name": "yt-block-vp9",
   "version": "1.0.0",
   "manifest_version": 2,
-  "description": "Stops youtube form streaming VP9 videos\nOriginally developed by erkserkserks: https://github.com/erkserkserks/h264ify",
+  "description": "Stops youtube from streaming VP9 videos. Originally developed by erkserkserks: https://github.com/erkserkserks/h264ify.",
   "homepage_url": "https://github.com/mxOBS/h264ify",
-  "update_url": "https://github.com/mxOBS/h264ify/raw/master/updates.xml",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
